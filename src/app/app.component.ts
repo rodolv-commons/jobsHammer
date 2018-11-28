@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs/Observable";
 import {HttpClient} from "@angular/common/http";
 import 'rxjs/Rx';
-import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -11,14 +9,18 @@ import { map } from "rxjs/operators";
 })
 
 export class AppComponent implements OnInit {
-  myObs: Observable<Object>;
+  jobsArray: any[];
+  
   constructor(private http:HttpClient) {
   }
 
   ngOnInit() {
-      this.myObs = this.http.get("../assets/data/jobs.json")
-      .pipe(map((res: Response) => res.body));
-      this.myObs.subscribe(jobs => console.log("jobs", jobs));
+    this.jobsArray = [];
+    this.http.get("../assets/data/jobs.json")
+      .map((data: any) => data)
+      .subscribe((data: any) => {
+        data.body.map(job => this.jobsArray.push(job));
+      });  
   }
 
 }
