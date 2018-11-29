@@ -14,17 +14,19 @@
   pippo
 </app-grid-list>-->
 
-<mat-grid-list cols="2" rowHeight="3:1">
+<mat-grid-list cols="2" rowHeight="200px">
   <mat-grid-tile [colspan]="2"
                  [rowspan]="1">
     <app-header></app-header>
   </mat-grid-tile>
 
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="1"
+                 [rowspan]="2">
     <app-jobs [jobs]="jobsArray"></app-jobs>
   </mat-grid-tile>
 
-  <mat-grid-tile>
+  <mat-grid-tile [colspan]="1"
+                 [rowspan]="2">
     <app-job-detail></app-job-detail>
   </mat-grid-tile>
 
