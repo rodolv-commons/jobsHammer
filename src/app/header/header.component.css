@@ -1,4 +1,9 @@
 header {
-  border: 1px solid red;
   text-align: center;
+  background-image: url('../../assets/img/myHammerLogo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 170px;
+  width: 65vw;
 }
