@@ -1,4 +1,12 @@
-<p>
-  jobs works!
-</p>
-<div>{{ getJobs() }}</div>
+<div>{{getJobs()}}</div>
+<mat-nav-list>
+  <mat-list-item *ngFor="let job of jobs">
+    <mat-icon matListIcon></mat-icon>
+    <div mat-line>
+      {{ job.title }}
+    </div>
+    <p mat-line>
+      {{ job.city }}
+    </p>
+  </mat-list-item>
+</mat-nav-list>

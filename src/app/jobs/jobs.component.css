@@ -1,0 +1,27 @@
+.mat-list-item {
+  color: rgba(255,255,255,.87);
+  background-color: #02698f;
+  border-color: #025776;
+  border-radius: .1428em;
+}
+
+.mat-list-item:hover {
+  color: rgba(2,105,143,.87);
+  background-color: rgba(255,255,255,.87);
+}
+
+mat-list-item div:first-child{
+  font-weight: bold
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  margin: calc(3px * var(--basic-unit-space));
+}
+
+
+mat-icon {
+  background-image: url('../../assets/ico/myHammerIcon.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
