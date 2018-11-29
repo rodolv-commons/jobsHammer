@@ -10,6 +10,7 @@ import { JobDetailComponent } from './jobs/job-detail/job-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule, MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule} from '@angular/material';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatGridListModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
