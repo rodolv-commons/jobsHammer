@@ -6,8 +6,9 @@
 }
 
 .mat-list-item:hover {
-  color: rgba(2,105,143,.87);
-  background-color: rgba(255,255,255,.87);
+  color: #fff;
+  background-color: #01445d;
+  border-color: #012a39;
 }
 
 mat-list-item div:first-child{
