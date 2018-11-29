@@ -22,12 +22,13 @@
 
   <mat-grid-tile [colspan]="1"
                  [rowspan]="3">
-    <app-jobs [jobs]="jobsArray"></app-jobs>
+    <app-jobs [jobs]="jobsArray">
+    </app-jobs>
   </mat-grid-tile>
 
   <mat-grid-tile [colspan]="1"
                  [rowspan]="3">
-    <app-job-detail></app-job-detail>
+    <app-job-detail [jobs]="jobsArray"></app-job-detail>
   </mat-grid-tile>
 
 </mat-grid-list>
