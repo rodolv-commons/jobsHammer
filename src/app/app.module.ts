@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule, MatGridListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule} from '@angular/material';
+import { MatButtonModule} from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { MatCardModule} from '@angular/material';
     BrowserAnimationsModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
