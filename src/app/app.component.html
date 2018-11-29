@@ -1,5 +1,5 @@
 
-<app-header></app-header>
+<!--<app-header class="header"></app-header>
 
 <div class="container">
   <div class="row">
@@ -8,4 +8,26 @@
       <app-jobs [jobs]="jobsArray"></app-jobs>
     </div>
   </div>
-</div>
+</div>-->
+
+<!--<app-grid-list>
+  pippo
+</app-grid-list>-->
+
+<mat-grid-list cols="2" rowHeight="3:1">
+  <mat-grid-tile [colspan]="2"
+                 [rowspan]="1">
+    <app-header></app-header>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-jobs [jobs]="jobsArray"></app-jobs>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-job-detail></app-job-detail>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
