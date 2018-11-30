@@ -1,9 +1,22 @@
 header {
   text-align: center;
   background-image: url('../../assets/img/myHammerLogo.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   height: 170px;
   width: 65vw;
+}
+
+
+@media (max-width: 1150px) {
+  header {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 135px;
+  }
 }

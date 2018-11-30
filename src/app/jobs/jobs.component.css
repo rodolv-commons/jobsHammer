@@ -26,3 +26,16 @@ mat-icon {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+@media (max-width: 1024px) {
+  .mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mat-nav-list {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
