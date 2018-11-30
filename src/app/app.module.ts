@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule} from '@angular/material';
 import { MatButtonModule} from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

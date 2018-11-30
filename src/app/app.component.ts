@@ -11,6 +11,7 @@ import 'rxjs/Rx';
 export class AppComponent implements OnInit {
   jobsArray: any[];
   currentIdx: number;
+  isLoading: boolean = true;
   constructor(private http: HttpClient) {
   }
 
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
     this.http.get('../assets/data/jobs.json')
       .map((data: any) => data)
       .subscribe((data: any) => {
+        this.isLoading = false;
         data.body.map(job => this.jobsArray.push(job));
       });
   }

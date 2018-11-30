@@ -18,3 +18,17 @@
     </app-job-detail>
   </mat-grid-tile>
 </mat-grid-list>
+
+<mat-card *ngIf="isLoading"
+          style="display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 50%;
+          left: calc(91.5vw/2);
+          background-color: #ebf0f4;">
+  <mat-progress-spinner
+    color="primary"
+    mode="indeterminate">
+  </mat-progress-spinner>
+</mat-card>
