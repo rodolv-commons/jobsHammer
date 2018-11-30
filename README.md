@@ -12,7 +12,7 @@ To get **started** with this _jobsHammer_, please
 follow these steps:
 
 * `git clone https://github.com/rodolv1979/jobsHammer.git`
-* `cd jobs-hammer`
+* `cd jobsHammer`
 * install all the project dependencies with `npm install`
 * start the development server with `ng serve` and navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files.
