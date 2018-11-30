@@ -8,6 +8,7 @@
 .job-detail-card__image-wrapper {
   padding-top: calc(1px * var(--basic-unit-space));
   padding-bottom: calc(2px * var(--basic-unit-space));
+  text-align: center;
 }
 
 .job-detail-card__image{
