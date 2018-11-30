@@ -10,7 +10,8 @@ import 'rxjs/Rx';
 
 export class AppComponent implements OnInit {
   jobsArray: any[];
-  constructor(private http:HttpClient) {
+  currentIdx: number;
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
@@ -20,6 +21,9 @@ export class AppComponent implements OnInit {
       .subscribe((data: any) => {
         data.body.map(job => this.jobsArray.push(job));
       });
+  }
+  receiveIdx($event) {
+    this.currentIdx = $event;
   }
 
 }

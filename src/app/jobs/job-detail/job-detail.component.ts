@@ -7,14 +7,14 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class JobDetailComponent implements OnInit {
   @Input() jobs: object[];
+  @Input() currentIdx: any;
+
   constructor() { }
 
   ngOnInit() {
 
   }
-
-  getJobs() {
-    console.log(this.jobs);
+  getCurrentIdx() {
+    return this.currentIdx;
   }
-
 }

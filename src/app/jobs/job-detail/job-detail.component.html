@@ -1,25 +1,27 @@
-<div>{{getJobs()}}</div>
-<mat-card class="job-detail-card">
+<mat-card class="job-detail-card"
+          *ngIf="getCurrentIdx() !== undefined">
   <mat-card-header>
     <img  mat-card-avatar
-          src="{{jobs[0].thumbnail}}">
-    <mat-card-title>{{jobs[0].title}}</mat-card-title>
-    <mat-card-subtitle>{{jobs[0].city}} {{jobs[0].zip_code}},
-      id n. {{jobs[0].id}}</mat-card-subtitle>
+          src="{{jobs[getCurrentIdx()].thumbnail}}">
+    <mat-card-title>{{jobs[getCurrentIdx()].title}}</mat-card-title>
+    <mat-card-subtitle>{{jobs[getCurrentIdx()].city}} {{jobs[getCurrentIdx()].zip_code}},
+      id n. {{jobs[getCurrentIdx()].id}}</mat-card-subtitle>
   </mat-card-header>
   <div class="job-detail-card__image-wrapper">
     <img mat-card-image
          class="job-detail-card__image"
-         src="{{jobs[0].attachments[0]}}"
-         alt="Photo of a Shiba Inu">
+         src="{{jobs[getCurrentIdx()].attachments[0]}}"
+         alt="Missinf image of Job with id {{jobs[getCurrentIdx()].id}}">
   </div>
   <mat-card-content>
     <p>
-      {{jobs[0].description.slice(0,150)}}...
+      {{jobs[getCurrentIdx()].description.slice(0,150)}}...
     </p>
     <p>
-      <span matBadge="{{jobs[0].counter.messages_total}}" matBadgeOverlap="false">Total Messages</span>
-      <span matBadge="{{jobs[0].counter.messages_unread}}" matBadgeOverlap="false">Unread Messages</span>
+      <span matBadge="{{jobs[getCurrentIdx()].counter.messages_total}}"
+            matBadgeOverlap="false">Total Messages</span>
+      <span matBadge="{{jobs[getCurrentIdx()].counter.messages_unread}}"
+            matBadgeOverlap="false">Unread Messages</span>
     </p>
   </mat-card-content>
   <mat-card-actions>
@@ -27,4 +29,3 @@
     <button mat-button>Share</button>
   </mat-card-actions>
 </mat-card>
-

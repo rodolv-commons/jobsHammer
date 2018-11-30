@@ -22,15 +22,17 @@
 
   <mat-grid-tile [colspan]="1"
                  [rowspan]="3">
-    <app-jobs [jobs]="jobsArray">
+    <app-jobs (currentIdx)="receiveIdx($event)" [jobs]="jobsArray">
     </app-jobs>
   </mat-grid-tile>
 
   <mat-grid-tile [colspan]="1"
-                 [rowspan]="3">
-    <app-job-detail [jobs]="jobsArray"></app-job-detail>
+                 [rowspan]="3"
+                 class="fallback">
+    <app-job-detail [currentIdx]="currentIdx"
+                    [jobs]="jobsArray">
+    </app-job-detail>
   </mat-grid-tile>
-
 </mat-grid-list>
 
 

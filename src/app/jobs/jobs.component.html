@@ -1,7 +1,7 @@
-<div>{{getJobs()}}</div>
 <mat-nav-list>
-  <div *ngFor="let job of jobs">
-    <mat-list-item *ngIf="job.state === 'active'">
+  <div *ngFor="let job of jobs; let i = index">
+    <mat-list-item (click)="onHandleClick(i)"
+                   *ngIf="job.state === 'active'">
       <mat-icon matListIcon></mat-icon>
       <div mat-line>
         {{ job.title }}

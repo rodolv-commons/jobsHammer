@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-jobs',
@@ -8,14 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class JobsComponent implements OnInit {
 
   @Input() jobs: object[];
+  @Output() currentIdx = new EventEmitter<number>();
+
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  getJobs() {
-    console.log(this.jobs);
+  onHandleClick(idx: number) {
+    this.currentIdx.emit(idx);
   }
 
 }
